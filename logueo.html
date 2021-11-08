@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="css/styleloguin.css">
+</head>
+<body>
+    <div class="margen-boton">
+        <a class="boton" href="index.html">Inicio</a>
+    </div>
+    <section class="form-login">
+  
+        <h4>Formulario Inicio de Sesión</h4>
+        <form action="#" id="formulario">
+            <input class="controls" type="text" name="usuario" id="usuario" placeholder="Ingrese el usuario">
+            <input class="controls"  type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
+            <input class="buttons" type="submit" value="Ingresar">
+            <p> <a href="#"> ¿Olvidaste la contraseña? </a></p>
+            <p>¿No tiene cuenta?  <a href="Registro.html"> Registrate </a></p>
+        </form>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+        document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento){
+            evento.preventDefault();
+            var usuario=document.getElementById('usuario').value;
+        
+            if(usuario.length==0){
+                alert("No has digitado ningun usuario");
+                return;
+            }
+            var contrasena=document.getElementById('contrasena').value;
+        
+            if(contrasena.length==0){
+                alert("No has digitado ninguna contrasena");
+                return;
+            }
+ 
+            this.submit();
+        }
+    </script>
+</body>
+</html>

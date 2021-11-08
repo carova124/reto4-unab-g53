@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    max-width: 1900px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.principal{
+    flex-wrap: wrap;
+}
+.contenedor{
+    padding: 60px 0 ; /*especio entre secciones*/
+    width: 90%;
+ /*   max-width: 1000px;*/
+    margin: auto;
+    overflow: hidden;/* si se sala del contenedor se esconde el resto de la imgagen*/
+
+}
+
+.titulo{
+    color:lightcyan;
+    font-size: 50px;
+
+    text-align: center;
+
+}
+.alinear{
+    flex-direction: initial;
+}
+
+/* header*/
+header{
+    /*width: 100%;
+    height: 800px;*/
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(210, 40%, 98%, 0), hsla(210, 96%, 46%, 0)), url(../imagen/copa.png);
+      /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(0, 0%, 99%, 0.123), #0575E6), url(../imagen/copa.png);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: auto;
+    background-attachment: fixed;
+    position:relative;
+}
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a{
+    color: #fff;
+    font-weight: 300; /*mas ligera*/
+    text-decoration: none;
+    margin-right: 10px; /*separa uno del otro*/
+}
+
+header .textos-header{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+.ola-m{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.equipos{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly; 
+}
+
+
+
+.galeria-port{
+
+    display:flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.galeria-port1{
+    padding: 2.5rem;
+    margin-left: -30rem;
+
+}
+.galeria-port2{
+    padding-top: 2.5rem;
+    margin-left: 36rem;
+
+}
+.imagen-port1{
+    padding-left: 15rem;
+}
+.imagen-gol{
+    font-weight: 700;
+
+}
+
+.marca{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-size: 38px;
+    font-weight: 700;
+    margin-left: 0.5cm;
+    color:#ffffff;
+   
+}
+
+.entrada{
+    background-color: thistle;
+    border-radius: 50% ;
+    border-style:solid;
+    margin: 3px;
+    padding: 1rem;
+    border-color: darkgray;
+    text-align: center;
+    border-width: 1vh;
+    border-style: outset;
+}
+.boton{
+    color:#a7fa02;
+    background-color:  #0097a7 ;
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: blink;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: 3rem;
+ 
+  
+}
+.margen-boton{
+    margin-left: 0.5cm;
+
+}
+.boton-registro{
+    background-image: url(../imagen/copa.png);
+    text-align: center;
+    
+}
+button{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 900;
+    color:#a7fa02;
+    background-color:  #0097a7 ; 
+    font-size: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+

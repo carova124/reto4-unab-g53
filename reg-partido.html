@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div>
+        
+    </div>
+        <title> PROYECTO WHATCH SOCCER</title>
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/styleloguin.css">
+        <div class="margen-boton">
+            <a class="boton" href="index.html">Inicio</a>
+        </div>
+    </div>
+</head>   
+
+<body style="background-color: #5394f8;">
+    <h1 style="color:#fbfcfd; width: 100%;font-size: 200%; text-align:center;">
+        PROYECTO WHATCH SOCCER
+    </h1>
+    <h2 style="color:#fbfcfd; width: 100%;font-size: 200%; text-align:center;">
+        Para los amantes del mejor espectaculo del mundo
+    </h2>
+    <form>
+        <fieldset style="background-color: hsla(240, 88%, 48%, 0.548);"" >
+            <legend style=" color: #fdfdfd; text-align:center;"> USUARIO: </legend>
+            <br>
+            <legend class="subtitulos" > REGISTRAR PARTIDO</legend>
+            <br>
+            <div class="centrar">
+                <section> 
+                    <label class="subtitulo" for="LOCAL"> LOCAL:  </label>
+
+                    <select id="LOCAL" name="LOCAL">
+                        <option value="11-bucaramanga">Bucaramanga</option>
+                        <option value="1-junior">Junior</option>
+                        <option value="2-millonarios">Millonarios</option>
+                        <option value="3-dep-medellin">Dep Medellin</option>
+                        <option value="4-chico">Chico</option>
+                        <option value="5-alianza-petrolera">Alianza Petrolera</option>
+                        <option value="6-equidad">Equidad</option>
+                        <option value="7-envigado">Envigado</option>
+                        <option value="8-santafe">Santafe</option>
+                        <option value="9-nacional">Nacional</option>
+                        <option value="10-america">America de Cali</option>
+                        <option value="12-dep-cali">Deportivo Cali</option>
+                        
+                    </select>
+                </section>
+                <section> 
+                    <b class="subtitulo" >Seleccione fecha partido</b>
+                    <input type="date" name="fe_par" id="fe_par"> 
+                </section>
+                <section>    
+                    <label class="subtitulo" for="VISITANTE"> VISITANTE: </label>
+
+                    <select id="VISITANTE" name="VISITANTE">
+                        <option value="5-alianza-petrolera">Alianza Petrolera</option>
+                        <option value="1-junior">Junior</option>
+                        <option value="2-millonarios">Millonarios</option>
+                        <option value="3-dep-medellin">Dep Medellin</option>
+                        <option value="4-chico">Chico</option>
+                        <option value="6-equidad">Equidad</option>
+                        <option value="7-envigado">Envigado</option>
+                        <option value="8-santafe">Santafe</option>
+                        <option value="9-nacional">Nacional</option>
+                        <option value="10-america">America de Cali</option>
+                        <option value="11-bucaramanga">Bucaramanga</option>
+                        <option value="12-dep-cali">Deportivo Cali</option>
+
+
+                    </select>
+                </section>
+                
+            </div>
+            <div class="contenedor">
+                <div>
+                    <br>
+                    <img class="img-local"src="imagen/11-bucaramanga.jpg" alt="equipo local">
+                </div>  
+                <div class=" marca">
+                    <div> 
+                    <label class="marca" >Marcador local</label>
+                    <input class= "entrada" type="number" id="marca-local">
+                     </div>
+                </div>
+
+                <div class="img-visitante ">
+                    <label>Marcador visitante</label>
+                    <input class="entrada" type="number" id="marca-visitante">   
+ 
+
+                <img  src="imagen/5-alianza.jpg" alt="equipo visitante">
+                </div>
+            </div>
+
+    </fieldset>
+    <div class="boton-registro"> 
+        <div class="margen-boton">
+            <button class="boton" type="button" onclick="validar()">REGISTRAR MARCADOR</button>       
+        </div>
+ 
+    </div> 
+
+    <script>
+
+            function validar(){
+                var marcaLocal, marcaVisitante, fe_par,
+                fe_par=parseInt(document.getElementById("fe_par").value);
+                marcaLocal=parseInt(document.getElementById("marca-local").value);
+                marcaVisitante=parseInt(document.getElementById("marca-visitante").value);
+                if(fe_par < 0){
+                    alert("Debe seleccionar una fecha");
+                }
+                if(isNaN(marcaLocal) || isNaN(marcaVisitante)){
+                    alert("es necesario digitar los dos marcadores");
+                }
+                if(marcaLocal < 0 || marcaVisitante < 0){
+                    alert("el marcador no puede ser negativo");
+                }
+                if (marcaLocal > 9 || marcaVisitante > 9 ){
+                    /*
+                alert("esta seguro del marcador local: " + marcaLocal+ " y visitante: "+marcaVisitante );*/
+                var mensaje = confirm("esta seguro del marcador local: "+marcaLocal+" visitante: "+marcaVisitante );
+
+    
+}
+}
+</script>
+
+    </form>
+</body>
+
+</html>

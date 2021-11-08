@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-image: url('fondoregistroverde.jpg');
+}
+
+.form-register {
+    width: 400px;
+    background: rgb(24, 65, 107);
+    padding: 30px;
+    margin: auto;
+    margin-top: -45px;
+    border-radius: 4px;
+    font-family:  'Calibri';
+    color: white; 
+    box-shadow: 7px 13px 37px #000;
+
+}
+.form-register h4{ 
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.controls{
+    width: 100%;
+    background: rgb(24, 65, 107);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid hsl(219, 29%, 80%);
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+.form-register h5{
+    margin: 0;
+    text-align: center;
+    height: 10px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 14px;
+}
+.form-register a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold
+}
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.form-register .botons{
+    width: 100%;
+    height: 40px;
+    background: hsl(221, 56%, 59%);
+    border: none;
+    color: white;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: bold;  
+}
+.boton{
+    color:#a7fa02;
+    background-color:  #0097a7 ;
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: blink;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: 3rem;
+}
+.boton-registro{
+    display: flex;
+    
+    justify-content:space-evenly;
+}
+.centrar{
+    display: flex;
+    justify-content: space-around
+}

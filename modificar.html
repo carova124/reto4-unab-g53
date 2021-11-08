@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reto3</title>
+    <link rel="stylesheet" href="css/estilos.css">
+ <!--   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+
+</head>
+  
+<body>
+    
+    <header>
+ 
+        <div class="margen-boton alinear ">
+
+            <a class="boton" href="index.html">Inicio</a>
+            <h1 class="titulo">Modificar marcadores</h1>
+            
+    </div>
+             <section class="textos-header">
+ 
+                <div class="galeria-port1">
+                    <div>
+
+                        <label class="marca" > Goles del: </label>
+                        <img src="imagen/1-junior-min.jpg" alt="">
+                        <input class= "entrada" type="number" id="marca-local">
+
+                    </div>  
+                </div> 
+
+                <div class="equipos">
+
+            
+                    <div class="galeria-port">
+                        <div class="imagen-port">
+                            <script>
+                                var equipo = 1
+                                var imagen= " "
+                    
+                                switch(equipo){
+                                    case 1:
+                                        imagen = '<img src="imagen/1-junior.png" width="290" height="290" >';
+                                        break;
+                                    case 2:
+                                        imagen = '<img src="imagen/2-millos.jpg" width="290" height="290" >';
+                                        break;                 
+                                    case 3:
+                                        imagen = '<img src="imagen/3-dim.jpg" width="290" height="290" >';
+                                        break;
+                                    case 4:
+                                        imagen = '<img src="imagen/4-chico.jpg" width="290" height="290" >';
+                                        break;  
+                                    case 5:
+                                        imagen = '<img src="imagen/5-alianza.png" width="290" height="290" >';
+                                        break;
+                                    case 6:
+                                        imagen = '<img src="imagen/6-equidad.jpg" width="290" height="290" >';
+                                        break;
+                                    case 7:
+                                        imagen = '<img src="imagen/7-envigado.jpg" width="290" height="290" >';
+                                        break;
+                                    case 8:
+                                        imagen = '<img src="imagen/8-santafe.jpg" width="290" height="290" >';
+                                        break;  
+                                    case 9:
+                                        imagen = '<img src="imagen/9-nacional.jpg" width="290" height="290" >';
+                                        break;
+                                    case 10:
+                                        imagen = '<img src="imagen/10-america.png" width="290" height="290" >';
+                                        break;
+                                    case 11:
+                                        imagen = '<img src="imagen/11-bucaramanga.jpg" width="290" height="290" >';
+                                        break;
+                                    case 12:
+                                        imagen =' <img src="imagen/12-cali.jpg" width="290" height="290" >';
+                                        break;
+                                            
+                                }
+                                document.write(imagen);  
+
+                            </script>
+    
+                        </div>  
+    
+                        
+                        <div class="imagen-port1">
+                            <script>
+                                var equipo = 2
+                                var imagen= " "
+                    
+                                switch(equipo){
+                                    case 1:
+                                        imagen = '<img src="imagen/1-junior.jpg" width="290" height="290" >';
+                                        break;
+                                    case 2:
+                                        imagen = '<img src="imagen/2-millos.png" width="290" height="290" >';
+                                        break;                 
+                                    case 3:
+                                        imagen = '<img src="imagen/3-dim.jpg"> width="290" height="290" >';
+                                        break;
+                                    case 4:
+                                        imagen = '<img src="imagen/4-chico.jpg" width="290" height="290" >';
+                                        break;  
+                                    case 5:
+                                        imagen = '<img src="imagen/5-alianza.jpg" width="290" height="290" >';
+                                        break;
+                                    case 6:
+                                        imagen = '<img src="imagen/6-equidad.jpg" width="290" height="290" >';
+                                        break;
+                                    case 7:
+                                        imagen = '<img src="imagen/7-envigado.jpg" width="290" height="290" >';
+                                        break;
+                                    case 8:
+                                        imagen = '<img src="imagen/8-santafe.jpg" width="290" height="290" >';
+                                        break;  
+                                    case 9:
+                                        imagen = '<img src="imagen/9-nacional.jpg" width="290" height="290" >';
+                                        break;
+                                    case 10:
+                                        imagen = '<img src="imagen/10-america.jpg" width="290" height="290" >';
+                                        break;
+                                    case 11:
+                                        imagen = '<img src="imagen/11-bucaramanga.jpg" width="290" height="290" >';
+                                        break;
+                                    case 12:
+                                        imagen =' <img src="imagen/12-cali.jpg" width="290" height="290" >';
+                                        break;
+                                            
+                                }
+                                document.write(imagen);                        
+                            </script>
+
+                        </div>
+    
+        
+                    </div>
+                    
+    
+                </div> 
+                <div class="imagen-gol galeria-port2">
+                    <div class="imagen-port texto-marcas ">
+                
+                        <label class="marca">Goles del:  </label>
+                        <img src="imagen/2-millos-min.jpg" alt="">
+                        <input class="entrada" type="number" id="marca-visitante">   
+                    </div>  
+                </div>          
+                
+            </section>
+                <div class= "ola-m" style="height: 150px; overflow:hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 309.81,152.45 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                     style="stroke: none; fill: #08f;"></path></svg></div>
+    </header> 
+                <div class="boton-registro"> 
+                    <div class="boton">
+                    <button  type="button" onclick="validar()">REGISTRAR MARCADOR</button>       
+                    </div>
+                 </div>  
+
+            
+
+        <script>
+
+                function validar(){
+                        var marcaLocal, marcaVisitante
+                        marcaLocal=parseInt(document.getElementById("marca-local").value);
+                        marcaVisitante=parseInt(document.getElementById("marca-visitante").value);
+                        if(isNaN(marcaLocal) || isNaN(marcaVisitante)){
+                            alert("es necesario digitar los dos marcadores");
+                        }
+                        if(marcaLocal < 0 || marcaVisitante < 0){
+                            alert("el marcador no puede ser negativo");
+                        }
+                        if (marcaLocal > 9 || marcaVisitante > 9 ){
+                            /*
+                        alert("esta seguro del marcador local: " + marcaLocal+ " y visitante: "+marcaVisitante );*/
+                        var mensaje = confirm("esta seguro del marcador local: "+marcaLocal+" visitante: "+marcaVisitante );
+                    
+                        }
+                }
+        </script>
+ 
+</body>    
+
+</html>

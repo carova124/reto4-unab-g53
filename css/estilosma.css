@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Source+Code+Pro:ital,wght@0,500;0,700;1,300&display=swap');
+:root {
+    --background: linear-gradient(135deg, #667eea48 0%, #764ba23f, 100%);
+    --color-primario: #667eea;
+    --color-secundario: #764ba2;
+    --boton-padding: 20px 40px;
+}
+/*header{
+    width: 100%;
+    height: 600px;
+    background: #0575E6;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, hsla(210, 40%, 98%, 0), hsla(210, 96%, 46%, 0)), url(../img/imgProyectowatchSoccer/logo_size_invert);
+      /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, hsla(0, 0%, 99%, 0.123), #0575E6), url(../imgProyectowatchSoccer/logo_size_invert.jpg);*/
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /*background-size: auto;
+    background-attachment: fixed;
+    position:relative;*/
+/*}*/
+body {
+    font-family: 'Source Code Pro', monospace;
+    color:var(--color-secundario);
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+}
+
+.subtitulo {
+    color: #2e13c5da;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.soccer {
+    height: 100vh;
+    background-image: /*#2e13c5da*/ url(../imagen/alex.1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: scroll;
+    background-position: center;
+    position: relative;
+}
+
+.soccer .contenedor {
+    padding: 0;
+}
+
+/*.nav {
+    display: flex;
+    justify-content:center;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}*/
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    /*height: 70px;*/
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer {
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav__items {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav__items--cta {
+    border: 1px solid var(--color-primario);
+}
+
+.nav__items--footer {
+    padding: 10px;
+}
+
+.soccer__contenedor {
+    display: flex;
+    height: cal(100vh - 70px);
+    align-items: center;
+    color: #2e13c5da;
+}
+
+.soccer__textos {
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.soccer__titulos {
+    font-size: 3.2rem;
+}
+
+.soccer__subtitulos {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.soccer__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.soccer__cta {
+    display: inline-block;
+    background:#FFF;
+    padding: var(--boton-padding);
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+/*About*/
+
+.presentacion {
+    padding-top: 0;
+    text-align: center;
+}
+
+.contenedor__imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.presentacion__copia {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.presentacion__cta {
+    display: inline-block;
+    margin-top: 30px;
+    background:#2e13c5da;
+    color: #fff;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+
+.about {
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+.imagen__about {
+    text-align: center;
+}
+
+.imagen__about--left {
+    text-align: left;
+}
+
+.about__picture {
+    min-width: 80%;
+}
+
+.parrafo__about {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/*Enlaces de interes*/
+
+.enlaces {
+    background:steelblue;
+}
+
+.parrilla__enlaces {
+    display: grid;
+    height: 550px;
+    grid-template-areas: " img1 img1 img2 img3" "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.items__parrilla {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imagen__enlaces {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.items__parrilla:nth-of-type(1) {
+    grid-area: img1;
+}
+
+.items__parrilla:nth-of-type(2) {
+    grid-area: img2;
+}
+
+.items__parrilla:nth-of-type(3) {
+    grid-area: img3;
+}
+
+.items__parrilla:nth-of-type(4) {
+    grid-area: img4;
+}
+
+.items__parrilla:nth-of-type(5) {
+    grid-area: img5;
+}
+
+.hover__enlaces {
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform.3s ease-in-out;
+}
+
+.items__parrilla:hover .hover__enlaces {
+    transform: translateX(0%);
+}
+
+.icono__enlaces {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*Opiniones*/
+
+.parrilla__opiniones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.opiniones__item {
+    width: 95%;
+    margin: 0 auto;
+    background: #2e13c5da;
+    box-shadow: 0 8px 10px rgba(66, 66, 66, .5);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.opinion__persona {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagen__opiniones {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 30px;
+}
+
+.opiniones__nombre {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.verificacion__opiniones {
+    color: #E0AFA0;
+    font-weight: 700;
+}
+
+.resumen__opiniones {
+    font-weight: 300;
+}
+
+/*footer*/
+
+.footer__end {
+    background:#2e13c5da;
+}
+
+.footer__parrilla {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__titulo {
+    font-weight: 400;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__iconos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor__footer-iconos {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+.footer__icon {
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+.fab.footer__icon {
+    line-height: 60px;
+}
+
+/*Responsive Design*/
+
+@media screen and (max-width:800px) {
+    :root {
+        --boton-padding: 18px 40px;
+    }
+    .nav {
+        justify-content: space-around;
+    }
+    .nav__items--cta {
+        border: none;
+    }
+    .nav__items {
+        font-weight:50;
+        border-bottom: 1px solid #fff;
+        margin-right: 0;
+    }
+    .nav--footer {
+        border: none;
+    }
+    .soccer__textos {
+        width: 100%;
+        margin-bottom: 80px;
+        align-items: center;
+    }
+    .soccer__titulos {
+        font-size: 2rem;
+        align-items: center;
+    }
+    .soccer__subtitulos {
+        font-size: 1rem;
+        align-items: center;
+    }
+    /*About*/
+    .presentacion__copia {
+        width: 100%;
+    }
+    .about {
+        grid-template-rows: 1fr;
+    }
+    .about.contenedor {
+        padding-top: 30px;
+    }
+    .imagen__about--left {
+        text-align: center;
+    }
+    .textos__about:last-child {
+        grid-row: 3/4;
+    }
+    /*Enlaces de interés*/
+    .parrilla__enlaces {
+        grid-template-areas: "img1 img1 img2 mig2" "img1 img1 img3 img3" "img4 img4 img5 img5";
+    }
+    .parrilla__opiniones {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    /*footer*/
+    .footer__parrilla {
+        grid-template-rows: 1fr;
+    }
+    .footer__contacto {
+        grid-row: 1/2;
+    }
+}
+
+@media screen and(max-width:500px) {
+    :root {
+        --boton-padding: 18px 35px;
+    }
+    .subtitulo {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .nav {
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+    .nav__items {
+        padding: 10px;
+        border: 0;
+    }
+    .soccer__textos {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .soccer__titulos {
+        font-size: 2rem;
+    }
+    /*About*/
+    .imagen__about {
+        width: 120px;
+        height: 120px;
+    }
+    .about {
+        row-gap: 60px;
+    }
+    .about.contenedor {
+        padding-top: 10px;
+    }
+    /*enlaces de interes*/
+    .parrilla__enlaces {
+        grid-template-areas: "img1" "img2" "img3" "img4" "img5";
+        height: auto;
+        grid-template-rows: repeat (5, 250px);
+        grid-auto-rows: 250px;
+        gap: 10px;
+    }
+    /*opiniones*/
+    .opiniones__item {
+        padding: 30px 15px;
+    }
+    .opiniones__nombre {
+        flex-direction: column;
+    }
+    .texto__opiniones {
+        text-align: center;
+    }
+    .imagen__opiniones{
+        margin: 0;
+        margin-bottom: 20px;
+
+    }
+}

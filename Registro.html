@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/styleloguin.css">
+    <title>Formulario de registro</title>
+</head>
+<body>
+
+    <div class="margen-boton">
+        <a class="boton" href="index.html">Inicio</a>
+    </div>
+
+    <section class="form-register">
+        <h4>Formulario de registro</h4>
+        <input  class="controls" type="text" onkeypress="return soloLetras(event)"
+         onblur="limpia()" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" 
+         font style="text-transform: uppercase;">
+
+         <input  class="controls" type="text" onkeypress="return soloLetrasUsuario(event)"
+         onblur="limpia()" name="usuario" id="usuario" placeholder="Ingrese su nombre usuario" 
+         font style="text-transform: uppercase;">
+
+         <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo electronico">
+         <input class="controls" type="submit" value="Validar correo" onClick="pruebacorreo(correo.value);">
+   
+        <form action="#" id= "formulario"> 
+            <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
+            <input class="controls" type="password" name="contrasenaConfirmar" id="contrasenaConfirmar" placeholder="Confirmar contraseña">
+ 
+            <h5>Al registrarse acepta las políticas de uso y privacidad</h5>
+            <input class="botons" type="submit" value="Registrar">
+            <p>¿Ya esta registrado?  <a href="logueo.html"> Iniciar Sesion </a></p>
+        </form>
+           <script>
+                function soloLetras(e) {
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                    especiales = [8, 37, 39, 46];
+
+                    tecla_especial = false
+                    for(var i in especiales) {
+                        if(key == especiales[i]) {
+                            tecla_especial = true;
+                            break;
+                        }
+                    }
+
+                    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+                        return false;
+                }
+
+                function limpia() {
+                    var val = document.getElementById("nombre").value;
+                    var tam = val.length;
+                    for(i = 0; i < tam; i++) {
+                        if(!isNaN(val[i]))
+                            document.getElementById("nombre").value = '';
+                    }
+                }
+                function soloLetrasUsuario(e) {
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                    especiales = [8, 37, 39, 46];
+
+                    tecla_especial = false
+                    for(var i in especiales) {
+                        if(key == especiales[i]) {
+                            tecla_especial = true;
+                            break;
+                        }
+                    }
+
+                    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+                        return false;
+                }
+
+                function limpia() {
+                    var val = document.getElementById("nombre").value;
+                    var tam = val.length;
+                    for(i = 0; i < tam; i++) {
+                        if(!isNaN(val[i]))
+                            document.getElementById("nombre").value = '';
+                    }
+                }
+                function pruebacorreo (valor){
+                    re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+                    if(!re.exec(valor)){
+                        alert('Correo  no valido ');
+                    }
+                    else alert('Correo valido puede continuar');
+                    }
+                    document.addEventListener("DOMContentLoaded", function(){
+                    document.getElementById("formulario").addEventListener('submit', validarFormulario);
+                     });
+        
+                    function validarFormulario(evento){
+                        evento.preventDefault();
+                        var nombre=document.getElementById('nombre').value;
+                        var usuario=document.getElementById('usuario').value;
+                        var correo=document.getElementById('correo').value;
+                        var contrasena=document.getElementById('contrasena').value;
+                        var contrasenaconf=document.getElementById('contrasenaConfirmar').value;
+                        if (nombre.length==0){
+                            alert("No has digitado ningun nombre");
+                            return;
+                        }
+                        if(usuario.length==0){
+                            alert("no has digitado ningun usuario");
+                            return;
+                        }
+                        if (correo.length==0){
+                            alert("No has digitado ningun correo ");
+                            return;
+                        }
+                        if(contrasena.length==0){
+                            alert("No has digitado ninguna contrasena");
+                            return;
+                        }
+                        var pass=document.getElementById('contrasena').value;
+                        if(pass.length<6){
+                            alert("La contraseña no es valida, minimo debe tener 6 caracteres");
+                            return;
+                        }
+                        if (contrasena != contrasenaconf){
+                            alert("Las contraseñas no son iguales");
+                            return;
+                        }
+
+
+                        this.submit();
+                    }
+            </script>
+   
+ 
+     </section>
+
+
+</body>
+</html>
